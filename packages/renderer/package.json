@@ -1,0 +1,63 @@
+{
+  "name": "@vite-plugin-ssr-monorepo/renderer",
+  "version": "0.0.0",
+  "type": "module",
+  "types": "./dist/renderer/index.d.ts",
+  "exports": {
+    ".": "./dist/renderer/index.js",
+    "./vite-plugin-ssr.config.js": "./dist/vite-plugin-ssr.config.js",
+    "./renderer/_default.page.client.js": "./dist/renderer/_default.page.client.js",
+    "./renderer/_default.page.server.js": "./dist/renderer/_default.page.server.js",
+    "./eject.config.js": "./dist/eject.config.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/",
+    "renderer/"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup",
+    "release": "release-me patch"
+  },
+  "dependencies": {
+    "@brillout/eject": "^0.1.0",
+    "@brillout/release-me": "^0.0.8",
+    "react": "18.x.x",
+    "react-dom": "18.x.x",
+    "vite-plugin-ssr": "^0.4.49"
+  },
+  "peerDependencies": {
+    "react": "18.x.x",
+    "react-dom": "18.x.x",
+    "vite-plugin-ssr": "^0.4.49"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "vite-plugin-ssr": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@types/node-fetch": "^2.5.12",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.3",
+    "@vitejs/plugin-react": "^2.2.0",
+    "cross-fetch": "^3.1.5",
+    "node-fetch": "^2.6.1",
+    "tsup": "^6.4.0",
+    "typescript": "4.9.1-beta",
+    "vite": "^3.2.3"
+  },
+  "repository": "github:brillout/stem-react",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}
